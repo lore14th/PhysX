@@ -3,7 +3,7 @@ project "physx-foundation"
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
-	staticruntime "On"
+	staticruntime "Off"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -52,31 +52,28 @@ project "physx-foundation"
 		}
 
 	filter "configurations:Debug"
+		defines { "_DEBUG" }
 		runtime "Debug"
-		symbols "On"	-- debug version --
-
-		defines
-		{
-			"_DEBUG"
-		}
+		symbols "On"
 
 	filter "configurations:Release"
+		defines { "NDEBUG" }
 		runtime "Release"
-		optimize "Full"	-- release version --
-		inlining "Auto"
-		floatingpoint "Fast"
+		optimize "On"
+		symbols "On"
 
-		defines
-		{
-			"NDEBUG"
-		}
+	filter "configurations:Distribution"
+		defines { "NDEBUG" }
+		runtime "Release"
+		optimize "On"
+		symbols "Off"
 
 -- PHYSX COMMON -----------------------------------------------------------------------------------
 project "physx-common"
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
-	staticruntime "On"
+	staticruntime "Off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -151,31 +148,28 @@ project "physx-common"
 		}
 
 	filter "configurations:Debug"
+		defines { "_DEBUG" }
 		runtime "Debug"
-		symbols "On"	-- debug version --
-
-		defines
-		{
-			"_DEBUG"
-		}
+		symbols "On"
 
 	filter "configurations:Release"
+		defines { "NDEBUG" }
 		runtime "Release"
-		optimize "Full"	-- release version --
-		inlining "Auto"
-		floatingpoint "Fast"
+		optimize "On"
+		symbols "On"
 
-		defines
-		{
-			"NDEBUG"
-		}
+	filter "configurations:Distribution"
+		defines { "NDEBUG" }
+		runtime "Release"
+		optimize "On"
+		symbols "Off"
 
 -- PHYSX PVD SDK ----------------------------------------------------------------------------------
 project "physx-pvdSDK"
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
-	staticruntime "On"
+	staticruntime "Off"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -218,31 +212,28 @@ project "physx-pvdSDK"
 	--filter "system:macosx"
 
 	filter "configurations:Debug"
+		defines { "_DEBUG" }
 		runtime "Debug"
-		symbols "On"	-- debug version --
-
-		defines
-		{
-			"_DEBUG"
-		}
+		symbols "On"
 
 	filter "configurations:Release"
+		defines { "NDEBUG" }
 		runtime "Release"
-		optimize "Full"	-- release version --
-		inlining "Auto"
-		floatingpoint "Fast"
+		optimize "On"
+		symbols "On"
 
-		defines
-		{
-			"NDEBUG"
-		}
+	filter "configurations:Distribution"
+		defines { "NDEBUG" }
+		runtime "Release"
+		optimize "On"
+		symbols "Off"
 
 -- PHYSX COOKING ----------------------------------------------------------------------------------
 project "physx-cooking"
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
-	staticruntime "On"
+	staticruntime "Off"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -313,31 +304,28 @@ project "physx-cooking"
 		}
 
 	filter "configurations:Debug"
+		defines { "_DEBUG" }
 		runtime "Debug"
-		symbols "On"	-- debug version --
-
-		defines
-		{
-			"_DEBUG"
-		}
+		symbols "On"
 
 	filter "configurations:Release"
+		defines { "NDEBUG" }
 		runtime "Release"
-		optimize "Full"	-- release version --
-		inlining "Auto"
-		floatingpoint "Fast"
+		optimize "On"
+		symbols "On"
 
-		defines
-		{
-			"NDEBUG"
-		}
+	filter "configurations:Distribution"
+		defines { "NDEBUG" }
+		runtime "Release"
+		optimize "On"
+		symbols "Off"
 
 -- PHYSX ------------------------------------------------------------------------------------------
 project "physx"
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
-	staticruntime "On"
+	staticruntime "Off"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -469,31 +457,28 @@ project "physx"
 		}
 
 	filter "configurations:Debug"
+		defines { "_DEBUG" }
 		runtime "Debug"
-		symbols "On"	-- debug version --
-
-		defines
-		{
-			"_DEBUG"
-		}
+		symbols "On"
 
 	filter "configurations:Release"
+		defines { "NDEBUG" }
 		runtime "Release"
-		optimize "Full"	-- release version --
-		inlining "Auto"
-		floatingpoint "Fast"
+		optimize "On"
+		symbols "On"
 
-		defines
-		{
-			"NDEBUG"
-		}
+	filter "configurations:Distribution"
+		defines { "NDEBUG" }
+		runtime "Release"
+		optimize "On"
+		symbols "Off"
 
 -- PHYSX EXTENSIONS  ------------------------------------------------------------------------------
 project "physx-extensions"
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
-	staticruntime "On"
+	staticruntime "Off"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -553,31 +538,28 @@ project "physx-extensions"
 		}
 
 	filter "configurations:Debug"
+		defines { "_DEBUG" }
 		runtime "Debug"
-		symbols "On"	-- debug version --
-
-		defines
-		{
-			"_DEBUG"
-		}
+		symbols "On"
 
 	filter "configurations:Release"
+		defines { "NDEBUG" }
 		runtime "Release"
-		optimize "Full"	-- release version --
-		inlining "Auto"
-		floatingpoint "Fast"
+		optimize "On"
+		symbols "On"
 
-		defines
-		{
-			"NDEBUG"
-		}
+	filter "configurations:Distribution"
+		defines { "NDEBUG" }
+		runtime "Release"
+		optimize "On"
+		symbols "Off"
 
 -- PHYSX CHARACTER KINEMATIC ----------------------------------------------------------------------
 project "physx-characterKinematic"
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
-	staticruntime "On"
+	staticruntime "Off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -621,31 +603,28 @@ project "physx-characterKinematic"
 		}
 
 	filter "configurations:Debug"
+		defines { "_DEBUG" }
 		runtime "Debug"
-		symbols "On"	-- debug version --
-
-		defines
-		{
-			"_DEBUG"
-		}
+		symbols "On"
 
 	filter "configurations:Release"
+		defines { "NDEBUG" }
 		runtime "Release"
-		optimize "Full"	-- release version --
-		inlining "Auto"
-		floatingpoint "Fast"
+		optimize "On"
+		symbols "On"
 
-		defines
-		{
-			"NDEBUG"
-		}
+	filter "configurations:Distribution"
+		defines { "NDEBUG" }
+		runtime "Release"
+		optimize "On"
+		symbols "Off"
 
 -- PHYSX VEHICLE ----------------------------------------------------------------------------------
 project "physx-vehicle"
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
-	staticruntime "On"
+	staticruntime "Off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -696,21 +675,18 @@ project "physx-vehicle"
 		}
 
 	filter "configurations:Debug"
+		defines { "_DEBUG" }
 		runtime "Debug"
-		symbols "On"	-- debug version --
-
-		defines
-		{
-			"_DEBUG"
-		}
+		symbols "On"
 
 	filter "configurations:Release"
+		defines { "NDEBUG" }
 		runtime "Release"
-		optimize "Full"	-- release version --
-		inlining "Auto"
-		floatingpoint "Fast"
+		optimize "On"
+		symbols "On"
 
-		defines
-		{
-			"NDEBUG"
-		}
+	filter "configurations:Distribution"
+		defines { "NDEBUG" }
+		runtime "Release"
+		optimize "On"
+		symbols "Off"
