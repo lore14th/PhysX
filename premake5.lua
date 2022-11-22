@@ -17,7 +17,7 @@ project "physx-foundation"
 		"physx/source/foundation/include/*.h"
 	}
 
-	sysincludedirs
+	externalincludedirs
 	{
 		"physx/include",
 		"pxshared/include",
@@ -95,7 +95,7 @@ project "physx-common"
 		"physx/source/compiler/resource_x64/PhysXCommon.rc"
 	}
 
-	sysincludedirs
+	externalincludedirs
 	{
 		"physx/include",
 		"physx/include",
@@ -186,7 +186,7 @@ project "physx-pvdSDK"
 		"physx/source/pvd/include/**.h"
 	}
 
-	sysincludedirs
+	externalincludedirs
 	{
 		"physx/include",
 		"pxshared/include",
@@ -252,7 +252,7 @@ project "physx-cooking"
 		"physx/source/compiler/resource_x64/PhysXCooking.rc"
 	}
 
-	sysincludedirs
+	externalincludedirs
 	{
 		"physx/include",
 		"pxshared/include",
@@ -383,7 +383,7 @@ project "physx"
 		"physx/source/compiler/resource_x64/resource.h"
 	}
 
-	sysincludedirs
+	externalincludedirs
 	{
 		"physx/include",
 		"pxshared/include",
@@ -496,7 +496,7 @@ project "physx-extensions"
 		"physx/source/physxmetadata/**.cpp",
 	}
 
-	sysincludedirs
+	externalincludedirs
 	{
 		"physx/include",
 		"pxshared/include",
@@ -571,7 +571,7 @@ project "physx-characterKinematic"
 		"physx/source/physxcharacterkinematic/src/*.cpp"
 	}
 
-	sysincludedirs
+	externalincludedirs
 	{
 		"physx/include",
 		"pxshared/include",
@@ -636,7 +636,7 @@ project "physx-vehicle"
 		"physx/source/physxvehicle/src/**.cpp"
 	}
 
-	sysincludedirs
+	externalincludedirs
 	{
 		"physx/include",
 		"pxshared/include",
